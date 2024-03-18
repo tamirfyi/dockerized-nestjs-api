@@ -1,15 +1,20 @@
-FROM alpine:latest
+# Use a Node.js base image with a specific version
+FROM node:latest
 
-RUN sudo apt-get update -y
-RUN sudo apt-get install nodejs npm -y
-
-COPY api /home/api
-
-EXPOSE 8000
-
+# Set the working directory inside the container
 WORKDIR /home/api
 
-ENTRYPOINT ["npm"]
+# Copy package.json and package-lock.json to the working directory
+COPY /api/package*.json ./
 
-CMD ["run", "start"]
+# Install dependencies
+RUN npm install
 
+# Copy the rest of the application code to the working directory
+COPY api .
+
+# Expose the port on which your NestJS application runs (default is 3000)
+EXPOSE 8001
+
+# Command to start your NestJS application
+CMD ["npm", "run", "start"]
