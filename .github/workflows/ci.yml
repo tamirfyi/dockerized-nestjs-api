@@ -18,6 +18,9 @@ jobs:
       with:
         node-version: '20'
 
+    - name: change to api dir
+      run: cd api/
+
     - name: install dependencies
       run: npm install
 
