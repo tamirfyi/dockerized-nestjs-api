@@ -1,7 +1,10 @@
 # compiled output
 /dist
+/api/dist
 /node_modules
+/api/node_modules
 /build
+/api/build
 
 # Logs
 logs
