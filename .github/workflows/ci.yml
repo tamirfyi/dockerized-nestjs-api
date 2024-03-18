@@ -19,7 +19,7 @@ jobs:
         node-version: '20'
 
     - name: change to api dir
-      run: cd api/
+      run: cd dockerized-nestjs-api/api/
 
     - name: install dependencies
       run: npm install
