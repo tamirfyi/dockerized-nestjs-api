@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: node-latest
+    runs-on: self-hosted
 
     steps:
     - name: checkout code

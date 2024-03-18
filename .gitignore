@@ -1,4 +1,6 @@
 # compiled output
+actions-runner
+
 /dist
 /api/dist
 /node_modules
