@@ -10,20 +10,19 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - name: checkout code
-      uses: actions/checkout@v2
+      - name: checkout code
+        uses: actions/checkout@v2
 
-    - name: setup nodejs
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
+      - name: setup nodejs
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20'
 
-    - name: change to api dir
-      run: cd dockerized-nestjs-api/api
+      - name: change to api dir
+        run: cd dockerized-nestjs-api/api
 
-    - name: install dependencies
-      run: npm install
+      - name: install dependencies
+        run: npm install
 
-    - name: build and test
-      run: npm run build && npm run test
-
+      - name: build and test
+        run: npm run build && npm run test
